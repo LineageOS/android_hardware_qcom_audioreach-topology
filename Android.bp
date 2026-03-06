@@ -13,3 +13,11 @@ filegroup {
         "util/**/*.m4",
     ],
 }
+
+audioreach_topology {
+    name: "qcom-sm8550-odin2-topology",
+    stem: "AYN-Odin2-tplg.bin",
+    topology: "AYN-Odin2.m4",
+    includes: [":audioreach-topology-includes"],
+    relative_install_path: "qcom/sm8550",
+}
