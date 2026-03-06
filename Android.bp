@@ -23,3 +23,15 @@ genrule_defaults {
     ],
     srcs: [":audioreach-confs"],
 }
+
+genrule {
+    name: "qcom-sm8550-odin2-tplg-genrule",
+    defaults: ["audioreach-cmd"],
+    out: ["AYN-Odin2-tplg.bin"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-odin2-tplg",
+    srcs: [":qcom-sm8550-odin2-tplg-genrule"],
+    dsts: ["qcom/sm8550/AYN-Odin2-tplg.bin"],
+    vendor: true,
+}
