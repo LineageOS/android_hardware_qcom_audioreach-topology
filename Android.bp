@@ -1,0 +1,15 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+}
+
+filegroup {
+    name: "audioreach-topology-includes",
+    srcs: [
+        "audioreach/**/*.m4",
+        "util/**/*.m4",
+    ],
+}
