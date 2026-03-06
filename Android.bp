@@ -1,0 +1,25 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+}
+
+filegroup {
+    name: "audioreach-confs",
+    srcs: [
+        "*.m4",
+        "**/*.m4",
+    ],
+}
+
+genrule_defaults {
+    name: "audioreach-cmd",
+    cmd: "$(location m4) -I $$(dirname $$(awk '{print $$1}' <<< \"$(in)\")) $$(tr ' ' '\n' <<< \"$(in)\" |grep $$(basename -s \"-tplg.bin\" $(out))) > $(genDir)/$$(basename -s \"-tplg.bin\" $(out)).conf && $(location alsatplg) -c $(genDir)/$$(basename -s \"-tplg.bin\" $(out)).conf -o $(out)",
+    tools: [
+        "alsatplg",
+        "m4",
+    ],
+    srcs: [":audioreach-confs"],
+}
