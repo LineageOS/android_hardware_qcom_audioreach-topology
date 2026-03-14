@@ -21,3 +21,11 @@ audioreach_topology {
     includes: [":audioreach-topology-includes"],
     relative_install_path: "qcom/sm8550",
 }
+
+audioreach_topology {
+    name: "qcom-sm8750-ayn-topology",
+    stem: "SM8750-AYN-tplg.bin",
+    topology: "SM8750-AYN.m4",
+    includes: [":audioreach-topology-includes"],
+    relative_install_path: "qcom/sm8750",
+}
