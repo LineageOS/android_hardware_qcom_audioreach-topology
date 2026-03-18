@@ -1,0 +1,19 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+bootstrap_go_package {
+    name: "soong-audioreach-topology",
+    pkgPath: "android/soong/audioreach_topology",
+    deps: [
+        "blueprint",
+        "blueprint-proptools",
+        "soong",
+        "soong-android",
+    ],
+    srcs: [
+        "audioreach_topology.go",
+    ],
+    pluginFor: ["soong_build"],
+}
