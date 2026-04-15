@@ -45,6 +45,7 @@ set(TPLGS
 	"QCS6490-Thundercomm-RubikPi3\;QCS6490-Thundercomm-RubikPi3\;qcom/qcs6490/Thundercomm/RubikPi3\;"
 	"TALOS-EVK\;TALOS-EVK\;qcom/qcs615\;"
 	"AYN-Odin2\;AYN-Odin2\;qcom/sm8550\;"
+	"SM8750-AYN\;SM8750-AYN\;qcom/sm8750\;"
   )
 
 # The list of directories to skip when synchronizing to linux-firmware
